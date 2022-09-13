@@ -1,6 +1,8 @@
 # Rubiks-Cube-Project
 
-### The goal with this project is to use a combination of logic and algorithms to make a program that can give us the directions to solve a Rubiks cube.
+### The goal with this project is to use a combination of logic and algorithms to make a program that can give us the directions to solve a Rubiks cube. The logic and backend aspects of the project will be written in Python, while the frontend and visual representation of the project will either be using a 3D Python library, or adapted into a web based application.
+
+![Alt Text](https://media.giphy.com/media/kFuavIYvRQZGg/giphy.gif)
 ---
 ### Contributors:
  - Schuyler Good
