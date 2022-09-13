@@ -65,17 +65,14 @@ def isCubeSolved(cube):
     Parameters: cube of type Cube
     Returns:    Boolean value
     """
-    sideChecks = []
     for i in range(len(cube.sides)):
-        sideChecks.append(isSideSolved(cube, CORESPONDING_SIDES_INT[i]))
-    for i in sideChecks:
-        if(i != True):
+        if isSideSolved(cube, CORESPONDING_SIDES_INT[i]) == False:
             return False
-        else:
-            return True
+    
+    return True
+    
 
-
-def main():
+if __name__ == "__main__":
     cube1 = Cube(
         sides = [[["b","b","b"],["b","b","b"],["b","b","b"]], #Top
                  [["g","g","g"],["g","g","g"],["g","g","g"]], # Bottom
@@ -88,8 +85,3 @@ def main():
     print(isSideSolved(cube1, "Front"))
     print(findWhiteMiddles(cube1))
     print(isCubeSolved(cube1))
-
-    
-main()
-    
-    
