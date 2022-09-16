@@ -5,12 +5,17 @@ Date:           9/12/2022
 Course:         CISC 204 - Final Logic Project
 """
 
+
 class Cube:
     def __init__(self, sides):
         self.sides = sides
 
+
+RIGHTY = "R T R` T`"
+LEFTY = "L` T` L T"
 CORESPONDING_SIDES_INT = {0:"Top",1:"Bottom",2:"Front",3:"Back",4:"Left",5:"Right"}
 CORESPONDING_SIDES_STRING = {"Top":0,"Bottom":1,"Front":2,"Back":3,"Left":4,"Right":5}
+
 
 def findWhiteCenter(cube):
     """
@@ -59,6 +64,7 @@ def isSideSolved(cube, side):
     return True
 
 
+#this is good and efficient
 def isCubeSolved(cube):
     """
     Function:   Determines if the cube is solved
@@ -72,15 +78,18 @@ def isCubeSolved(cube):
     return True
     
 
-if __name__ == "__main__":
+
+if __name__ == "__main__": # this is epic and efficient
     cube1 = Cube(
-        sides = [[["b","b","b"],["b","b","b"],["b","b","b"]], #Top
-                 [["g","g","g"],["g","g","g"],["g","g","g"]], # Bottom
-                 [["y","y","y"],["y","y","y"],["y","y","y"]], # Front
-                 [["w","w","w"],["w","w","w"],["w","w","w"]], # Back
-                 [["r","r","r"],["r","r","r"],["r","r","r"]], # Left
-                 [["o","o","o"],["o","o","o"],["o","o","o"]]] # Right
+        sides = {"Top":[["b","b","b"],["b","b","b"],["b","b","b"]], #Top
+                 "Bottom":[["g","g","g"],["g","g","g"],["g","g","g"]], # Bottom
+                 "Front":[["y","y","y"],["y","y","y"],["y","y","y"]], # Front
+                 "Back":[["w","w","w"],["w","w","w"],["w","w","w"]], # Back
+                 "Left":[["r","r","r"],["r","r","r"],["r","r","r"]], # Left
+                 "Right":[["o","o","o"],["o","o","o"],["o","o","o"]]} # Right
     )
+
+
     print('White Center:', findWhiteCenter(cube1))
     print(isSideSolved(cube1, "Front"))
     print(findWhiteMiddles(cube1))
